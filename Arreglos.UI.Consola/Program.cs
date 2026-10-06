@@ -10,12 +10,14 @@ internal class Program
 
         try
         {
+            oMiArreglo.Agregar(10);
+            oMiArreglo.Agregar(5);
+            oMiArreglo.Agregar(-4);
 
-            for (int i = 0; i < oMiArreglo.N; i++)
-            {
-                oMiArreglo.Agregar(i * 3);
-            }
+            Console.WriteLine(oMiArreglo);
+            Console.ReadKey();
 
+            oMiArreglo.Insertar(200, 1);
 
         }
 

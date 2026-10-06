@@ -99,6 +99,29 @@ namespace Arreglos.Logica
 
         }
 
+        //Método Insertar
+         public void Insertar(int numero, int posicion)
+        {
+            if(EstaLleno)
+            {
+                throw new Exception("El arreglo esta lleno");
+            }
+            if(posicion < 0)
+            {
+                posicion = 0;
+            }
+            if (posicion > _tope)
+            {
+                posicion = _tope;
+            }
+            for (int i= _tope; i > posicion; i--)
+            {
+                _arreglo[posicion] = numero;
+            }
+            _arreglo[posicion] = numero;
+            _tope++;
+
+        }
 
 
         public override string ToString()
